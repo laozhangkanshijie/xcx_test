@@ -1,0 +1,19 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "usingComponents": {
+        "van-button": "../../dist/button/index",
+        "van-field": "../../dist/field/index",
+        "van-checkbox": "../../dist/checkbox/index",
+        "van-checkbox-group": "../../dist/checkbox-group/index"
+    },
+    "sitemapLocation": "sitemap.json"
+}

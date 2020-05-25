@@ -1,0 +1,47 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      获取头像昵称
+    </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+<van-button type="primary" bind:click="getmockdata">主要按钮</van-button>
+<text>aaa</text>
+<van-button type="primary" block>块级元素</van-button>
+<van-field value="{{ value }}" placeholder="请输入用户名" border="{{ false }}" bind:change="onChange" error-message="{{aa}}" />
+<view class="test">
+  <h1>哈哈</h1>
+</view>
+<view class="form_group">
+  <input type="text" class="sendmsg_input" placeholder="短信验证码" data-name="data_code" value="{{data_code}}" placeholder-class="placeholder_style" bindinput='getInputKey' />
+  <view class='vertificate' bindtap="getVerificationCode">
+    {{time}}
+    <text>{{suffix}}</text>
+  </view>
+</view>
+
+<!-- picker使用 适合多个选择-->
+<view class="section">
+  <view class="section__title">普通选择器</view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[index]}}
+    </view>
+  </picker>
+</view>
+
+<!-- checkbok可以写单个，也可以配合checkbox-group循环写多个，label标签用于关联表单组件 -->
+<label class="checkbox">
+        <checkbox value="cb" checked="true"/>选中
+      </label>
+
+<van-checkbox value="{{ checked }}" shape="square" bind:change="onChange" icon-size="50px">复选框</van-checkbox>
+<van-checkbox value="{{ checked }}" shape="square" bind:change="onChange" icon-size="10px">复选框</van-checkbox>

@@ -1,0 +1,21 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+} 
+
+
+
+page {
+
+  --button-border-radius: 6px;
+  --button-default-color: #f2f3f5;
+  --button-primary-color: pink;
+  --button-primary-background-color: #ccc;
+  --button-primary-border-color:#ccc;
+}
